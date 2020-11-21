@@ -73,7 +73,9 @@ function Prediction() {
 
     return (
         <div>
-
+            <div id='predict'>
+                predict
+            </div>
             <input id='passengerId' type='number' value={passengerId} min={1} max={891} onChange={handelPassengerId} />
             <br />
             <Dropdown id='pclass' options={pclasses} onChange={handelPclass} value={pclass} />
