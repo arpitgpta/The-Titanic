@@ -1,11 +1,11 @@
 import React from 'react'
 
-function PassengerData() {
+function Footer() {
     return (
         <div>
-            pass data
+            footer
         </div>
     )
 }
 
-export default PassengerData
+export default Footer
