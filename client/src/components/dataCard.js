@@ -1,7 +1,11 @@
 import React from 'react'
 
 function DataCard(props) {
+    
     const cname = props.className+' data-item d-flex justify-content-between align-items-center flex-wrap'
+
+    // for even cards align images first then description
+    // for odd cards do reverse
     if (props.className === 'card-even') {
         return (
             <div className={cname}>

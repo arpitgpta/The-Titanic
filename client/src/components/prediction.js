@@ -10,7 +10,7 @@ import Survived from './survived'
 import NotSurvived from './not_survived'
 
 function Prediction() {
-    const [prediction, setPrediction] = useState(<Predicting/>)
+    const [prediction, setPrediction] = useState(<Predicting />)
 
     const [passengerId, setPassengerId] = useState(1)
     const [pclass, setPclass] = useState('3')
@@ -23,7 +23,7 @@ function Prediction() {
 
 
     useEffect(() => {
-        setPrediction(<Predicting/>)
+        setPrediction(<Predicting />)
         const data = {
             passengerId,
             pclass,
@@ -44,9 +44,9 @@ function Prediction() {
         };
         axios(options).then(res => {
             if (res.data[17] === '0')
-                setPrediction(<NotSurvived/>)
+                setPrediction(<NotSurvived />)
             else
-                setPrediction(<Survived/>)
+                setPrediction(<Survived />)
         })
     }, [passengerId, pclass, sex, age, siblings, parch, fare, embarked])
 

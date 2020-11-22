@@ -1,29 +1,14 @@
 const express = require('express')
 const { spawn } = require('child_process');
 var bodyParser = require("body-parser");
-const { response } = require('express');
-
+const path = require('path');
 
 const app = express()
 const port = 5005
 app.use(express.static("public"));
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
-
-
-app.get('/', (req, res) => {
-
-    var dataToSend;
-    const script = spawn('python', ['script.py']);
-    script.stdout.on('data', function (data) {
-        console.log('Pipe data from python script ...');
-        dataToSend = data.toString();
-    });
-    script.on('close', (code) => {
-        console.log(`child process close all stdio with code ${code}`);
-        res.send(dataToSend)
-    });
-})
+app.use(express.static('client/build'));
 
 app.post('/predict', (req, res) => {
     const request = JSON.parse(Object.keys(req.body)[0])
@@ -66,15 +51,18 @@ app.post('/predict', (req, res) => {
         embarkedC = 0
         embarkedQ = 1.0
     }
-    const script = spawn('python', ['script.py', passengerId, pclass, sexMale, sexFemale, age, siblings, parch, fare, embarkedS, embarkedC, embarkedQ]);
+    const script = spawn('python3', ['script.py', passengerId, pclass, sexMale, sexFemale, age, siblings, parch, fare, embarkedS, embarkedC, embarkedQ]);
     script.stdout.on('data', function (data) {
         response = data.toString();
     });
     script.on('close', (code) => {
+        // console.log(response);
         res.send(response)
     });
 })
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+});
 
 app.listen(port, () => console.log(`App listening on port ${port}!`))

@@ -147,8 +147,10 @@ body {
 
 .prediction{
   display: inline-block;
-  width: calc(300px + 3vw);
-  margin: 100px auto 20px;  
+  /* width: calc(300px + 3vw); */
+  /* text-align: left; */
+  margin-top: 100px;
+  margin-bottom: 20px;  
 }
 
 .predicting{
@@ -235,9 +237,28 @@ body {
 .my-intro{
   margin-left: 10%;
   padding-top: 15px;
-  padding-bottom: 8px;
+  padding-bottom: 15px;
 }
 
 .developer-name{
   font-size: 2em;
+}
+
+.fab{
+  font-size: 2em;
+  color: #a19d9d;
+  margin-top: 10px;
+  margin-right: 2vw;
+}
+
+.ficon{
+  margin-right: 30px;
+  font-size: 1em;
+}
+
+.resume{
+  background-color: #696a70;
+  position: relative;
+  left: 10vw;
+  margin-bottom: 20px;
 }
