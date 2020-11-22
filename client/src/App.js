@@ -12,45 +12,6 @@ function App() {
       <PassengerData/>
       <Prediction/>
       <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
-      <Footer/>
     </div>
   );
 }
