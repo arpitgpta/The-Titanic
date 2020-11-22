@@ -116,7 +116,7 @@ function Prediction() {
 
             <FormGroup className='input_group'>
                 <Label>Fare</Label>
-                <Input className='input-field' id='fare' value={fare} onChange={handelFare} />
+                <Input className='input-field' id='fare' value={fare} min={0} onChange={handelFare} />
             </FormGroup>
 
             <FormGroup className='input_group'>
