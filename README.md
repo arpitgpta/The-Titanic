@@ -2,7 +2,7 @@
 A web app to display the various plots generated during Data Analysis of The Titanic dataset
 This web app also provides user friendly UI to use ml model, predicting survival chance of a passenger.
 
-![]('./demo.mp4')
+![](demo.gif)
 
 ### How to use
 Run following block of script in a terminal
